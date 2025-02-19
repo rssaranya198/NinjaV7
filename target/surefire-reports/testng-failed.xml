@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="edgeTest(failed)" verbose="0">
+    <parameter name="os" value="windows"/>
+    <parameter name="browser" value="edge"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.TC03_AddtoCart">
+        <methods>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+          <include name="testAddCart"/>
+        </methods>
+      </class> <!-- testCases.TC03_AddtoCart -->
+    </classes>
+  </test> <!-- edgeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
